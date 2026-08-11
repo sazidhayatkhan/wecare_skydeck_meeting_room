@@ -98,7 +98,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex w-full flex-wrap items-center justify-between gap-3 sm:w-auto">
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:gap-3">
             <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
               <Building2 className="h-4 w-4" /> {user.companyName}
             </span>
