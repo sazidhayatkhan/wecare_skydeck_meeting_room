@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { toast } from 'sonner';
 import { DoorOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -44,11 +45,20 @@ export function AuthScreen({ onAuthed }: { onAuthed: (user: User) => void }) {
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center p-4">
+    <main className="flex min-h-screen flex-col items-center justify-center p-4">
+      <div className="mb-6 flex items-center justify-center">
+        <Image
+          src="/images/skydeck_logo.png"
+          alt="Skydeck logo"
+          width={160}
+          height={80}
+          className="h-12 w-auto object-contain"
+        />
+      </div>
       <Card className="w-full max-w-sm">
         <CardHeader className="text-center">
-          <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <DoorOpen className="h-5 w-5" />
+          <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-md bg-primary text-primary-foreground">
+            <DoorOpen className="h-6 w-6" />
           </div>
           <CardTitle>Meeting Room</CardTitle>
           <CardDescription>

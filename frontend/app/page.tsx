@@ -84,7 +84,7 @@ export default function Home() {
   }
 
   return (
-    <main className="container max-w-7xl py-8">
+    <main className="container max-w-7xl py-8 pb-24">
       <header className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground">
