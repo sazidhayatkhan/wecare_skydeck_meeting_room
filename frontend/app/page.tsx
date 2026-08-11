@@ -97,11 +97,13 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="flex flex-wrap items-center gap-3">
-          <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
-            <Building2 className="h-4 w-4" /> {user.companyName}
-          </span>
-          <ThemePicker value={user.theme} onChange={handleThemeChange} />
+        <div className="flex w-full flex-wrap items-center justify-between gap-3 sm:w-auto">
+          <div className="flex items-center gap-3">
+            <span className="flex items-center gap-1.5 text-sm text-muted-foreground">
+              <Building2 className="h-4 w-4" /> {user.companyName}
+            </span>
+            <ThemePicker value={user.theme} onChange={handleThemeChange} />
+          </div>
           <Button variant="outline" size="sm" onClick={handleLogout}>
             <LogOut className="h-4 w-4" /> Log out
           </Button>

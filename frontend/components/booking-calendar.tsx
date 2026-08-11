@@ -61,7 +61,7 @@ export function BookingCalendar({
 
   return (
     <div>
-      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+      <div className="mb-3 flex items-center justify-center sm:justify-between">
         <div className="flex items-center gap-1">
           <Button
             variant="outline"
@@ -81,7 +81,7 @@ export function BookingCalendar({
             <ChevronRight className="h-4 w-4" />
           </Button>
         </div>
-        <Button onClick={onBook}>
+        <Button onClick={onBook} className="hidden sm:inline-flex">
           <Plus className="h-4 w-4" /> Book {format(new Date(`${selectedDate}T12:00:00`), 'MMM d')}
         </Button>
       </div>
@@ -143,6 +143,9 @@ export function BookingCalendar({
           );
         })}
       </div>
+      <Button onClick={onBook} className="mt-3 w-full sm:hidden">
+        <Plus className="h-4 w-4" /> Book {format(new Date(`${selectedDate}T12:00:00`), 'MMM d')}
+      </Button>
     </div>
   );
 }
